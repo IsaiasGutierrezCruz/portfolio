@@ -57,6 +57,11 @@
 	--t-active: var(--c-blue);
 	--t-bg-2: var(--c-black2);
 	--t-bl: var(--c-blue-2);
+	
+	// screen sizes 
+	--w-tiny: 575.98px;
+	--w-s-i: 576px;
+	--w-s-f: 767.98px;
 }
 
 // Base
@@ -66,6 +71,7 @@ body {
 	color: var(--t-fg);
 	font-family: 'Inter', 'system-ui', sans-serif;
 	background-color: var(--c-black2);
+	min-width: 245px;
 }
 
 * {

@@ -24,7 +24,7 @@ const projects = Astro.fetchContent<MarkdownFrontmatter>('./project/**/*.md')
 		</style>
 	</head>
 	<body>
-		<Nav />
+		<Nav client:load/>
 		<div class="wrapper">
 			<h1 class="title mt4 mb4">All Projects</h1>
 			<div class="grid">

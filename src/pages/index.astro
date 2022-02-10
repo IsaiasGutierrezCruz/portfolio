@@ -24,6 +24,7 @@ const featuredProject = projects[0];
 				position: relative;
 				overflow: hidden;
 
+
 				@media (min-width: $w-s) {
 					height: 45vw;
 				}
@@ -108,6 +109,7 @@ const featuredProject = projects[0];
 				color: var(--t-fg);
 				background-color: var(--t-bg);
 				padding: 0.25em 0.5em;
+				margin: 0.5em 0em;
 				z-index: 2;
 
 				@media (min-width: $w-s) {
@@ -187,7 +189,7 @@ const featuredProject = projects[0];
 		</style>
 	</head>
 	<body>
-		<Nav />
+		<Nav client:load></Nav>
 		<header class="hero">
 			<img
 				width="1200"
@@ -202,7 +204,7 @@ const featuredProject = projects[0];
 				<h1 class="title">
 					<small class="subtitle">The personal site of </small>Isaías Gutiérrez
 				</h1>
-				<div>
+				<div class="abilities">
 					<span class="role">&#128202 Data Scientist <span class="invert">&#128202 Data Scientist </span></span>&nbsp;
 					<span class="role">👩‍💻 Developer<span class="invert">👩‍💻 Developer</span></span>&nbsp;
 					<span class="role">✏️ Writer <span class="invert">✏️ Writer</span></span>

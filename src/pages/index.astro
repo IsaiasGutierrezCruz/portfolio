@@ -5,6 +5,7 @@ import Button from '../components/Button/index.jsx';
 import Nav from '../components/Nav/index.jsx';
 import Footer from '../components/Footer/index.jsx';
 import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
+import Highlight from '../components/Highlight/index.jsx';
 
 // Data Fetching: List all Markdown posts in the repo.
 const projects = Astro.fetchContent('./project/**/*.md');
@@ -18,22 +19,33 @@ const featuredProject = projects[0];
 	<head>
 		<MainHead title="Isaías Gutiérrez: Personal Site" description="Isaías Gutiérrez: Data Scientist, Developer, and Chemist..." />
 		<style lang="scss">
+			$w-tiny: 400px;
 			$w-s: 750px;
 
 			.hero {
 				position: relative;
 				overflow: hidden;
 
+				@media (max-width: $w-tiny){
+					height: 80vh;
+				}
 
 				@media (min-width: $w-s) {
 					height: 45vw;
 				}
 			}
 
+			.abilities{
+				margin-right: 1.5rem;
+			}
+
 			.img {
 				display: block;
 				width: 100%;
 				height: auto;
+				@media (max-width: $w-tiny){
+					height: 80vh;
+				}
 			}
 
 			.gradient,
@@ -68,9 +80,13 @@ const featuredProject = projects[0];
 				align-items: flex-start;
 				justify-content: center;
 				padding-left: 2rem;
+				padding-right: 6rem;
 
 				@media (min-width: $w-s) {
 					padding-left: 4rem;
+				}
+				@media (max-width: $w-tiny){
+					margin-right: 3rem;
 				}
 			}
 
@@ -83,6 +99,9 @@ const featuredProject = projects[0];
 
 				@media (min-width: $w-s) {
 					font-size: var(--f-u12);
+				}
+				@media (max-width: $w-tiny){
+					font-size: var(--f-u6);
 				}
 			}
 
@@ -164,6 +183,10 @@ const featuredProject = projects[0];
 				font-size: var(--f-u2);
 				margin-top: 1.5rem;
 				margin-bottom: 0;
+				margin-right: 1.5rem;
+				@media (max-width: $w-tiny){
+					font-size: var(--f-d1);
+				}
 			}
 
 			.subtitle {
@@ -207,9 +230,9 @@ const featuredProject = projects[0];
 				<div class="abilities">
 					<span class="role">&#128202 Data Scientist <span class="invert">&#128202 Data Scientist </span></span>&nbsp;
 					<span class="role">👩‍💻 Developer<span class="invert">👩‍💻 Developer</span></span>&nbsp;
-					<span class="role">✏️ Writer <span class="invert">✏️ Writer</span></span>
+					<span class="role">&#129514 Chemist <span class="invert">&#129514 Chemist</span></span>
 				</div>
-				<p class="desc">Lover of dogs, books, and data.</p>
+				<p class="desc">Problem resolver and lover of data, books, and dogs.</p>
 			</div>
 		</header>
 		<main class="wrapper mt4 mb4">
@@ -226,8 +249,7 @@ const featuredProject = projects[0];
 				<div class="section">
 					<h3 class="sectionTitle">About me</h3>
 					<p class="bio">
-						<span>Hello!</span> I’m Isaías, and this is my website. 
-					</p>
+						<span>Hello!</span> I’m a <Highlight>data scientist</Highlight> and <Highlight>chemist</Highlight> focused on resolving problems from our environment using the techniques and tools <Highlight>needed</Highlight> in each specific case. I also have experience developing software. 
 					<p>
 						<a href="/about">Read more</a>
 					</p>

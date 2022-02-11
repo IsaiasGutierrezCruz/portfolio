@@ -1,18 +1,20 @@
 ---
 layout: ../../layouts/project.astro
-title: Mars Rover
+setup: | 
+  import Highlight from '../../components/Highlight/index.jsx';
+title: Network Biology   
 client: Self
-publishDate: 2020-03-02 00:00:00
-img: https://images.unsplash.com/photo-1547234935-80c7145ec969?fit=crop&w=1400&h=700&q=75
+publishDate: 2021-02-10 00:00:00
+img: /assets/portfolio/biology-networks.jpg
 description: |
-  We built an unofficial Mars Rover Landing site in celebration of NASA’s Perseverance Rover.
+  I analyzed different pathological states from Alzheimer's Disease (early-onset and late-onset) using graph theory and information theory.
 tags:
-  - design
-  - dev
-  - branding
+  - data science
+  - networks
+  - biology
 ---
 
-Rubber cheese mascarpone cut the cheese. Jarlsberg parmesan cheesy grin cream cheese port-salut stinking bishop ricotta brie. Roquefort when the cheese comes out everybody's happy goat cheese triangles stilton cheese and biscuits goat babybel. Bocconcini roquefort queso danish fontina pecorino.
+Rubber cheese mascarpone cut the cheese. <Highlight>Jarlsberg</Highlight>  parmesan cheesy grin cream cheese port-salut stinking bishop ricotta brie. Roquefort when the cheese comes out everybody's happy goat cheese triangles stilton cheese and biscuits goat babybel. Bocconcini roquefort queso danish fontina pecorino.
 
 Smelly cheese stinking bishop roquefort. Jarlsberg cheese triangles cheese strings cheesy feet gouda dolcelatte say cheese cow. Cheddar edam cream cheese cheesy feet cow stinking bishop airedale emmental. Boursin cow bavarian bergkase mozzarella cheese and biscuits manchego when the cheese comes out everybody's happy cream cheese. Cheese on toast st. agur blue cheese croque monsieur halloumi.
 

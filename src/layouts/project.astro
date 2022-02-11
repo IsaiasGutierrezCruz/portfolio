@@ -11,6 +11,8 @@ const { content } = Astro.props;
 	<head>
 		<MainHead title={content.title} description={content.description} />
 		<style lang="scss">
+			$w-tiny: 400px;
+			$w-s: 750px;
 			.hero {
 				padding: 8rem;
 				display: flex;
@@ -22,6 +24,12 @@ const { content } = Astro.props;
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+			}
+			
+			.tags{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
 			}
 
 			.tag {
@@ -48,6 +56,10 @@ const { content } = Astro.props;
 				font-weight: 900;
 				text-transform: uppercase;
 				letter-spacing: 0.0625em;
+				@media (max-width: $w-s){
+					//margin-right: 3rem;
+					font-size: var(--f-u3);
+				}
 			}
 
 			.leadIn {
@@ -68,13 +80,15 @@ const { content } = Astro.props;
 		</style>
 	</head>
 	<body>
-		<Nav />
+		<Nav client:load/>
 		<header style={`background-image:url(${content.img})`} class="hero">
 			<h1 class="title">{content.title}</h1>
 		</header>
 		<div class="leadIn">
 			<div class="wrapper pt8 pb8 mb8 tac">
-				{content.tags.map((t) => <span class="tag">{t}</span>)}
+				<div class="tags">
+					{content.tags.map((t) => <span class="tag">{t}</span>)}
+				</div>
 				<h3 class="tagline">{content.description}</h3>
 			</div>
 		</div>

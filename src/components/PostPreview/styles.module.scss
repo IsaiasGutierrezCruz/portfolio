@@ -5,7 +5,12 @@ $w-s: 750px;
 	position: relative;
 	color: var(--t-fg);
 	background: var(--t-bl);
-	// border: 1px solid #f0f0f0;
+    width: 20rem;
+    margin: 1rem 1rem;
+    @media (max-width: $w-tiny){
+        //margin-right: 3rem;
+        width: auto;
+    }
 }
 
 .title {
@@ -35,6 +40,7 @@ $w-s: 750px;
 	background-size: cover;
 	background-position: 50% 100%;
 	padding-top: 37.5%;
+    height: 5rem;
 }
 
 .desc {
@@ -47,8 +53,10 @@ $w-s: 750px;
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 20rem;
+	height: 25rem;
+    // width:100%;
+    // height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -61,6 +69,12 @@ $w-s: 750px;
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: opacity 150ms linear;
+
+    @media (max-width: $w-tiny){
+        //margin-right: 3rem;
+        width: 100%;
+        height: 100%;
+    }
 
 	&:focus,
 	&:hover {
@@ -90,6 +104,7 @@ $w-s: 750px;
 	font-size: var(--f-d2);
 	text-transform: uppercase;
 }
+
 
 .tag {
 	display: inline-block;

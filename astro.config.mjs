@@ -12,5 +12,21 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
 	renderers: ['@astrojs/renderer-preact'],
 	buildOptions:{
 		site: 'https://isaiasgutierrez.me/'
-	}
+	},
+	markdownOptions: {
+    render: [
+      '@astrojs/markdown-remark',
+      {
+        // Pick a syntax highlighter. Can be 'prism' (default), 'shiki' or false to disable any highlighting.
+        syntaxHighlight: 'shiki',
+        // If you are using shiki, here you can define a global theme and
+        // add custom languages.
+        shikiConfig: {
+          theme: 'Material Palenight.',
+          langs: [],
+          wrap: false,
+        },
+      },
+    ],
+  }
 });

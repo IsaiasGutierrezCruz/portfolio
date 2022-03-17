@@ -18,14 +18,14 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
       '@astrojs/markdown-remark',
       {
         // Pick a syntax highlighter. Can be 'prism' (default), 'shiki' or false to disable any highlighting.
-        syntaxHighlight: 'shiki',
+        syntaxHighlight: 'prism',
         // If you are using shiki, here you can define a global theme and
         // add custom languages.
-        shikiConfig: {
-          theme: 'Material Palenight.',
-          langs: [],
-          wrap: false,
-        },
+        // shikiConfig: {
+        //   theme: 'Material Palenight.',
+        //   langs: [],
+        //   wrap: false,
+        // },
       },
     ],
   }

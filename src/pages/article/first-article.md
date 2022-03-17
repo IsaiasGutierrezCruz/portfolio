@@ -1,7 +1,8 @@
 ---
 layout: ../../layouts/post.astro
 setup: |
-  import { Code } from 'astro/components'
+  import { Code } from 'astro/components';
+  import Prism from 'astro/components';
 title: Prueba 1
 client: Self
 publishDate: 2020-03-02 00:00:00
@@ -26,6 +27,9 @@ Caerphilly parmesan manchego. Bocconcini cheesecake when the cheese comes out ev
 const foo = 'bar';
 ```
 
+```python
+print('hola mundo')
+```
 
 
 Cheese and biscuits cheesy grin roquefort. Ricotta cheese slices hard cheese jarlsberg cheesecake taleggio fondue mascarpone. Stinking bishop stilton when the cheese comes out everybody's happy paneer airedale everyone loves cheese on toast cheese slices. Ricotta cut the cheese cheese triangles babybel cream cheese ricotta.
